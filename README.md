@@ -18,10 +18,12 @@ Technical instructions
 To run these two scripts, you need to clone this github repo and 
 
 `$ git clone https://github.com/obitori/ubun2kali`
+
 `$ cd ubun2kali`
+
 `$ ./aws_ubun2kali.sh xxx.xxx.xxx.xxx SOME_KEY_FILE.pem`
 
-Voila, the script should upload the ubun2kali.sh script and execute it as root.  Now you can ssh into this machine, after it finishes rebooting, and you have a working Kali instance.
+"xxx.xxx.xxx.xxx" should be your AWS instance's public IP.  SOME_KEY_FILE.pem is the file containing your authentication key for the AWS instance.  This script assumes that the AWS user is ubuntu with no-password sudo rights.  The script should upload the ubun2kali.sh script and execute it as root.  Now you can ssh into this machine, after it finishes rebooting, and you have a working Kali instance.
 
 Bugs
 ----
