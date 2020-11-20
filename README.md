@@ -4,11 +4,13 @@ Ubuntu to Kali Conversion Script
 Overview
 --------
 
-This simple project allows you to convert a running of instance of Ubuntu with the binaries and other files installed by Kali, the well-known Linux pentesting distribution maintained by by Offensive Security.
+This simple project allows you to convert a running of instance of Ubuntu with the binaries and other files installed by Kali, the well-known Linux pentesting distribution maintained by by Offensive Security.  To achieve this, the scripts take advantage of the apt package management system, which manages system and application package updates on Debian GNU/Linux and its derivatives such as Ubuntu and Kali.  By swapping repositories, apt goes about "upgrading" the Ubuntu binaries and other files with the Kali versions, leaving you with a Kali box.  
 
-It contains two bash scripts:
+This is basically for personal use, but have at it.  The "ubun2kali.sh" script should work on any Ubuntu machine (but hasn't been tested.)  You could modify "aws_ubun2kali.sh" to work on any other ssh-accessible instance of Ubuntu.
 
-**ubun2kali.sh** -- This script is run on the target Ubuntu machine.  It basically replaces the Ubuntu repositories located in /etc/apt/sources.list with the repositories from the same location on a Kali machine. It then updates the machine with "apt update" and "apt upgrade -y".  The apt package management system (which manages system and application package updates on Debian GNU/Linux and its derivatives such as Ubuntu and Kali.
+This project contains two bash scripts:
+
+**ubun2kali.sh** -- This script is run on the target Ubuntu machine.  It basically replaces the Ubuntu repositories located in /etc/apt/sources.list with the repositories from the same location on a Kali machine. It then updates the machine with "apt update" and "apt upgrade -y".  
 
 **aws_ubun2kali.sh** -- This script takes two inputs from the user, an ip address and a pem file that must be located in ~/.ssh.  It uses these to connect to an AWS instance to upload and execute as root the ubun2kali.sh script.  
 
