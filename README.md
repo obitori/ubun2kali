@@ -8,9 +8,9 @@ This simple project allows you to convert a running of instance of Ubuntu with t
 
 It contains two bash scripts:
 
-ubun2kali.sh -- This script is run on the target Ubuntu machine.  It basically replaces the Ubuntu repositories located in /etc/apt/sources.list with the repositories from the same location on a Kali machine. It then updates the machine with "apt update" and "apt upgrade -y".  The apt package management system (which manages system and application package updates on Debian GNU/Linux and its derivatives such as Ubuntu and Kali.
+**ubun2kali.sh** -- This script is run on the target Ubuntu machine.  It basically replaces the Ubuntu repositories located in /etc/apt/sources.list with the repositories from the same location on a Kali machine. It then updates the machine with "apt update" and "apt upgrade -y".  The apt package management system (which manages system and application package updates on Debian GNU/Linux and its derivatives such as Ubuntu and Kali.
 
-aws_ubun2kali.sh -- This script takes two inputs from the user, an ip address and a pem file that must be located in ~/.ssh.  It uses these to connect to an AWS instance to upload and execute as root the ubun2kali.sh script.  
+**aws_ubun2kali.sh** -- This script takes two inputs from the user, an ip address and a pem file that must be located in ~/.ssh.  It uses these to connect to an AWS instance to upload and execute as root the ubun2kali.sh script.  
 
 Technical instructions
 ----------------------
